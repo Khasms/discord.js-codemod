@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.1](https://github.com/Khasms/discord.js-codemod/compare/v0.2.0...v0.2.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* **Deps:** add `typescript` ([f8e4324](https://github.com/Khasms/discord.js-codemod/commit/f8e43243c2d03d6e9998e3dfcaaeac4d9ffef3a3))
+
+
+
 # 0.2.0 (2021-10-07)
 
 
