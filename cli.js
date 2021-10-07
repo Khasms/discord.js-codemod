@@ -23,7 +23,6 @@ async function runTransform(transform, files, flags, codemodFlags) {
 				)} for a list of available codemods.`,
 			);
 		}
-
 		throw srcPathError;
 	}
 
@@ -34,9 +33,10 @@ async function runTransform(transform, files, flags, codemodFlags) {
 		...codemodFlags,
 		'--extensions',
 		'js,ts',
+		'--parser',
+		'flow',
 		'--ignore-pattern',
 		'**/node_modules/**',
-		'--no-babel',
 	];
 	if (flags.dry) {
 		args.push('--dry');
