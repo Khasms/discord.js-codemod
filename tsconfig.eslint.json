@@ -45,6 +45,7 @@
 		// Completeness
 		"skipLibCheck": true
 	},
+	"types": ["node"],
 	"include": ["**/*.ts", "**/*.js"],
 	"exclude": ["**/tests/*.js", "**/tests/*.ts"]
 }
