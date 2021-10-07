@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/no-require-imports */
 const { spawnSync } = require('child_process');
 const { access } = require('fs/promises');
 const { dirname, join, resolve } = require('path');
@@ -34,9 +32,10 @@ async function runTransform(transform, files, flags, codemodFlags) {
 		transformerPath,
 		...codemodFlags,
 		'--extensions',
-		'js,ts',
+		'js,ts,cjs,mjs',
 		'--ignore-pattern',
 		'**/node_modules/**',
+		'--no-babel',
 	];
 	if (flags.dry) {
 		args.push('--dry');

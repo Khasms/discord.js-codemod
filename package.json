@@ -2,7 +2,7 @@
 	"name": "discord.js-codemod",
 	"version": "0.1.0",
 	"bin": "./cli.js",
-	"type": "module",
+	"type": "commonjs",
 	"private": false,
 	"author": "Khasms",
 	"description": "Discord.js codemod scripts.",
