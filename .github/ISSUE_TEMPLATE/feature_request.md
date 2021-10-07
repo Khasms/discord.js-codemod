@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Request a feature for the discord.js-codemod
+about: Request a feature for discord.js-codemod
 title: ''
 labels: 'type: enhancement'
 assignees: ''

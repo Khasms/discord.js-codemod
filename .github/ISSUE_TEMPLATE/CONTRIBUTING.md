@@ -42,8 +42,6 @@ After cloning the repo, run:
 
 ```bash
 # Install the dependencies of the project
-npm install
-yarn install
 pnpm install
 ```
 

@@ -14,6 +14,7 @@
 		"jscodeshift"
 	],
 	"scripts": {
+		"preinstall": "npx only-allow pnpm",
 		"lint": "eslint --ext js,ts src/**/*.js",
 		"lint:fix": "eslint --fix --ext js,ts src/**/*.js",
 		"prepare": "is-ci || husky install",
