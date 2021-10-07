@@ -35,6 +35,7 @@ async function runTransform(transform, files, flags, codemodFlags) {
 		'js,ts',
 		'--ignore-pattern',
 		'**/node_modules/**',
+		'--no-babel',
 	];
 	if (flags.dry) {
 		args.push('--dry');
