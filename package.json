@@ -1,6 +1,6 @@
 {
 	"name": "discord.js-codemod",
-	"version": "0.2.8",
+	"version": "0.2.9",
 	"bin": "./cli.js",
 	"type": "commonjs",
 	"private": false,

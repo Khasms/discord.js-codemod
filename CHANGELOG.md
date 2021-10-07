@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.9](https://github.com/Khasms/discord.js-codemod/compare/v0.2.8...v0.2.9) (2021-10-07)
+
+
+### Bug Fixes
+
+* add `node` types ([086b947](https://github.com/Khasms/discord.js-codemod/commit/086b9477491b50749ce9d8a78a575f4c12d360a2))
+* fixed adding unnecessary imports ([d162c91](https://github.com/Khasms/discord.js-codemod/commit/d162c91db34ce612f33842d7698066680a1cb25e))
+
+
+
 ## [0.2.8](https://github.com/Khasms/discord.js-codemod/compare/v0.2.7...v0.2.8) (2021-10-07)
 
 
