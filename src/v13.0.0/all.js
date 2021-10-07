@@ -1,8 +1,6 @@
 const { readdir } = require('fs/promises');
 const { join } = require('path');
-
 const { parser } = require('../util');
-module.exports.parser = parser;
 
 module.exports = async function transform(file, api, options) {
 	let files = await readdir(__dirname);
@@ -16,3 +14,5 @@ module.exports = async function transform(file, api, options) {
 
 	return file.source;
 };
+
+module.exports.parser = parser;

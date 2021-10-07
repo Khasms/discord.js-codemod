@@ -8,7 +8,6 @@ const {
 	UserFlags,
 } = require('../constants');
 const { parser } = require('../util');
-module.exports.parser = parser;
 
 module.exports = function transform(file, api, options) {
 	const j = api.jscodeshift;
@@ -205,3 +204,5 @@ module.exports = function transform(file, api, options) {
 
 	return root.toSource(printOptions);
 };
+
+module.exports.parser = parser;
