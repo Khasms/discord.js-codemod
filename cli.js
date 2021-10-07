@@ -32,10 +32,9 @@ async function runTransform(transform, files, flags, codemodFlags) {
 		transformerPath,
 		...codemodFlags,
 		'--extensions',
-		'js,ts,cjs,mjs',
+		'js,ts',
 		'--ignore-pattern',
 		'**/node_modules/**',
-		'--no-babel',
 	];
 	if (flags.dry) {
 		args.push('--dry');
