@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.5](https://github.com/Khasms/discord.js-codemod/compare/v0.2.4...v0.2.5) (2021-10-07)
+
+
+### Bug Fixes
+
+* add missing header ([a9e1dc1](https://github.com/Khasms/discord.js-codemod/commit/a9e1dc1f301fff04d436e2aa418f333da1b7fe3a))
+
+
+
 ## [0.2.4](https://github.com/Khasms/discord.js-codemod/compare/v0.2.3...v0.2.4) (2021-10-07)
 
 
