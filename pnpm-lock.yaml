@@ -26,6 +26,7 @@ specifiers:
 dependencies:
   '@typescript-eslint/typescript-estree': 4.33.0_typescript@4.4.3
   jscodeshift: 0.13.0
+  typescript: 4.4.3
   yargs: 17.2.1
 
 devDependencies:
@@ -46,7 +47,6 @@ devDependencies:
   prettier: 2.4.1
   rimraf: 3.0.2
   standard-version: 9.3.1
-  typescript: 4.4.3
 
 packages:
   /@babel/code-frame/7.12.11:
@@ -6025,7 +6025,7 @@ packages:
       { integrity: sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA== }
     engines: { node: '>=4.2.0' }
     hasBin: true
-    dev: true
+    dev: false
 
   /uglify-js/3.14.2:
     resolution:
