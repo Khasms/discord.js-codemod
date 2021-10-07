@@ -1,4 +1,5 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
+
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 const { spawnSync } = require('child_process');
 const { access } = require('fs/promises');
@@ -33,10 +34,9 @@ async function runTransform(transform, files, flags, codemodFlags) {
 		...codemodFlags,
 		'--extensions',
 		'js,ts',
-		'--parser',
-		'flow',
 		'--ignore-pattern',
 		'**/node_modules/**',
+		'--no-babel',
 	];
 	if (flags.dry) {
 		args.push('--dry');
