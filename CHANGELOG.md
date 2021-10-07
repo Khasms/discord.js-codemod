@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.6](https://github.com/Khasms/discord.js-codemod/compare/v0.2.5...v0.2.6) (2021-10-07)
+
+
+### Bug Fixes
+
+* add default parser ([6ed394f](https://github.com/Khasms/discord.js-codemod/commit/6ed394f5c07f75a860d2f7b1d38330fda8ecbcee))
+
+
+
 ## [0.2.5](https://github.com/Khasms/discord.js-codemod/compare/v0.2.4...v0.2.5) (2021-10-07)
 
 
