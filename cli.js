@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 const { spawnSync } = require('child_process');
 const { access } = require('fs/promises');
