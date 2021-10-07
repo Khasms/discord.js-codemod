@@ -1,11 +1,13 @@
-const { parseAndGenerateServices } = require('@typescript-eslint/typescript-estree');
+const { parse } = require('@typescript-eslint/typescript-estree');
 
 function constructName(obj) {
 	const name = [];
 	let mut = obj;
 	while (!mut.name) {
-		name.push(mut.property.name);
-		mut = mut.object;
+		if (mut.property) {
+			name.push(mut.property.name);
+			mut = mut.object;
+		}
 	}
 	name.push(mut.name);
 	return name.reverse().join('.');
@@ -13,7 +15,7 @@ function constructName(obj) {
 
 const parser = {
 	parse: (source) => {
-		return parseAndGenerateServices(source, { range: true, loc: true, project: './tsconfig.eslint.json' });
+		return parse(source, { range: true, loc: true });
 	},
 };
 
