@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.11](https://github.com/Khasms/discord.js-codemod/compare/v0.2.10...v0.2.11) (2021-10-10)
+
+
+### Bug Fixes
+
+* add optional chaining ([cc835cb](https://github.com/Khasms/discord.js-codemod/commit/cc835cbcfe4c76e44f103b4f504f781cb8544acb))
+
+
+
 ## [0.2.10](https://github.com/Khasms/discord.js-codemod/compare/v0.2.9...v0.2.10) (2021-10-10)
 
 
