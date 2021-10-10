@@ -15,7 +15,7 @@ module.exports = function transform(file, api, options) {
 			},
 		})
 		.filter(({ node }) => {
-			return node.arguments[node.arguments.length > 1 ? 1 : 0]?.properties.some((prop) => prop.key.name === 'timeout');
+			return node.arguments[node.arguments.length > 1 ? 1 : 0]?.properties?.some((prop) => prop.key.name === 'timeout');
 		})
 		.replaceWith(({ node }) => {
 			const timeoutIndex = node.arguments.length > 1 ? 1 : 0;
