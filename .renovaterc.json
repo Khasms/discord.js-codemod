@@ -1,0 +1,38 @@
+{
+	"extends": [
+		"config:base",
+		"group:allNonMajor",
+		"helpers:pinGitHubActionDigests",
+		"schedule:weekends",
+		":separateMajorReleases",
+		":combinePatchMinorReleases",
+		":semanticPrefixChore",
+		":semanticCommitScope(Deps)",
+		":automergeMinor",
+		":automergeRequireAllStatusChecks",
+		":npm",
+		":assignAndReview(Khasms)",
+		":enableVulnerabilityAlertsWithLabel(vulnerability)",
+		":semanticCommits",
+		":pinVersions",
+		":maintainLockFilesWeekly"
+	],
+	"labels": ["dependencies"],
+	"lockFileMaintenance": {
+		"enabled": true
+	},
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["major"],
+			"addLabels": ["semver:major"]
+		},
+		{
+			"matchUpdateTypes": ["minor"],
+			"addLabels": ["semver:minor"]
+		},
+		{
+			"matchUpdateTypes": ["patch"],
+			"addLabels": ["semver:patch"]
+		}
+	]
+}
