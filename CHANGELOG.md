@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.3.0](https://github.com/Khasms/discord.js-codemod/compare/v0.2.11...v0.3.0) (2021-10-18)
+
+
+### Features
+
+* **13.0.0:** add `disableMentions` to `allowedMentions` transformer ([dcc269c](https://github.com/Khasms/discord.js-codemod/commit/dcc269c886f25e1bb09a37e1c7a9a5d05f68dab7))
+* **13.0.0:** add `messageCacheMaxSize` to `makeCache` transformer ([3957a4e](https://github.com/Khasms/discord.js-codemod/commit/3957a4eaf01ec54be5cb15b28911f01dab755ec1))
+* **13.0.0:** add `reply` message option transformer ([8c77269](https://github.com/Khasms/discord.js-codemod/commit/8c77269b998dad73a2020cb9491d4187fbe02726))
+
+
+
 ## [0.2.11](https://github.com/Khasms/discord.js-codemod/compare/v0.2.10...v0.2.11) (2021-10-10)
 
 
