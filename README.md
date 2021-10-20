@@ -83,6 +83,7 @@ Includes the following transformers:
 - [`move-respawn-params`](#move-respawn-params)
 - [`move-webhook-client-params`](#move-webhook-client-params)
 - [`recase-id`](#recase-id)
+- [`remove-disable-mentions`](#disable-mentions)
 - [`remove-fetch-all-members`](#remove-fetch-all-members)
 - [`remove-message-delete-reason`](#remove-message-delete-reason)
 - [`remove-message-edit-history`](#remove-message-edit-history)
@@ -112,6 +113,8 @@ Includes the following transformers:
 - [`update-generate-invite`](#update-generate-invite)
 - [`update-has-permission`](#update-has-permission)
 - [`update-member`](#update-member)
+- [`update-message-cache`](#update-member-cache)
+- [`update-message-reply`](#update-message-reply)
 - [`update-overwrite-permissions`](#update-overwrite-permissions)
 - [`update-owner`](#update-owner)
 - [`update-respawn-all`](#update-respawn-all)
@@ -206,6 +209,20 @@ Updates all uses of discord.js properties containing `ID` to use `Id`. See the g
 
 ```sh
 npx discord.js-codemod v13.0.0/recase-id <paths...>
+```
+
+#### `remove-disable-mentions`
+
+Updates all uses of `disableMentions` to the equivelent setup of `allowedMentions`.
+**Links:** [Discord.js Guide](https://discordjs.guide/additional-info/changes-in-v13.html#allowed-mentions)
+
+```diff
+- const client = new Discord.Client({ disableMentions: 'everyone' });
++ const client = new Discord.Client({ allowedMentions: { parse: ['users', 'roles'], repliedUser: true } });
+```
+
+```sh
+npx discord.js-codemod v13.0.0/remove-disable-mentions <paths...>
 ```
 
 #### `remove-fetch-all-members`
@@ -604,6 +621,34 @@ npx discord.js-codemod v13.0.0/update-has-permission <paths...>
 
 Replaces `Guild#member` with `GuildMemberManager#resolve`.
 **Links:** [Discord.js Guide](https://discordjs.guide/additional-info/changes-in-v13.html#guild-member)
+
+```diff
+- guild.member(user);
++ guild.members.resolve(user);
+```
+
+```sh
+npx discord.js-codemod v13.0.0/update-member <paths...>
+```
+
+#### `update-message-cache`
+
+Removes the `messageCacheMaxSize` client option and adds an equivalent `makeCache`.
+**Links:** [Discord.js Guide](https://discordjs.guide/additional-info/changes-in-v13.html#clientoptions-messagecachemaxsize)
+
+```diff
+- new Client({ messageCacheMaxSize: 100 });
++ new Client({ makeCache: Options.cacheWithLimits({ MessageManager: 100 }) });
+```
+
+```sh
+npx discord.js-codemod v13.0.0/update-message-cache <paths...>
+```
+
+#### `update-message-reply`
+
+Replaces `Guild#member` with `GuildMemberManager#resolve`.
+**Links:** [Discord.js Guide](https://discordjs.guide/additional-info/changes-in-v13.html#replies-message-reply)
 
 ```diff
 - guild.member(user);
