@@ -19,7 +19,7 @@
 		"prepare": "is-ci || husky install",
 		"prepublishOnly": "pnpm run lint && pnpm run test",
 		"test": "jest --passWithNoTests",
-		"test:ci": "jest --verbose --no-stack-trace",
+		"test:ci": "jest --verbose --no-stack-trace --passWithNoTests",
 		"release": "standard-version --preset angular"
 	},
 	"repository": {
