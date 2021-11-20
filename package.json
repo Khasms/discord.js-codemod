@@ -38,8 +38,8 @@
 		"yargs": "17.2.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "14.1.0",
-		"@commitlint/config-angular": "14.1.0",
+		"@commitlint/cli": "15.0.0",
+		"@commitlint/config-angular": "15.0.0",
 		"@types/jscodeshift": "0.11.3",
 		"@typescript-eslint/eslint-plugin": "4.33.0",
 		"@typescript-eslint/parser": "4.33.0",
