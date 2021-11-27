@@ -32,8 +32,9 @@
 	},
 	"homepage": "https://github.com/Khasms/discord.js-codemod#README",
 	"dependencies": {
-		"@typescript-eslint/typescript-estree": "4.33.0",
+		"@typescript-eslint/typescript-estree": "5.4.0",
 		"jscodeshift": "0.13.0",
+		"jscodeshift-add-imports": "^1.0.10",
 		"typescript": "4.5.2",
 		"yargs": "17.2.1"
 	},
@@ -41,9 +42,9 @@
 		"@commitlint/cli": "15.0.0",
 		"@commitlint/config-angular": "15.0.0",
 		"@types/jscodeshift": "0.11.3",
-		"@typescript-eslint/eslint-plugin": "4.33.0",
-		"@typescript-eslint/parser": "4.33.0",
-		"eslint": "7.32.0",
+		"@typescript-eslint/eslint-plugin": "5.4.0",
+		"@typescript-eslint/parser": "5.4.0",
+		"eslint": "8.3.0",
 		"eslint-config-marine": "9.0.6",
 		"eslint-config-prettier": "8.3.0",
 		"eslint-plugin-prettier": "4.0.0",
