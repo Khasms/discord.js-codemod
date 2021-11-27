@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 const addImports = require('jscodeshift-add-imports');
 const { parser } = require('../util');
 
@@ -32,12 +34,15 @@ module.exports = function transform(file, api, options) {
 
 			props.splice(props.indexOf(maxSize), 1);
 			props.push(makeCache);
-		});
 
-	addImports(
-		root,
-		j.importDeclaration([j.importSpecifier(j.identifier('Options'), j.identifier('Options'))], j.literal('discord.js')),
-	);
+			addImports(
+				root,
+				j.importDeclaration(
+					[j.importSpecifier(j.identifier('Options'), j.identifier('Options'))],
+					j.literal('discord.js'),
+				),
+			);
+		});
 
 	return root.toSource(printOptions);
 };
