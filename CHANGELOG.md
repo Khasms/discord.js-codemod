@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.2](https://github.com/Khasms/discord.js-codemod/compare/v0.3.0...v0.3.2) (2021-12-04)
+
+
+### Bug Fixes
+
+* **13.0.0:** replace bad array access ([9147cb5](https://github.com/Khasms/discord.js-codemod/commit/9147cb50ab642b99524f513fee8b1e210c002be7))
+* **deps:** pin dependency jscodeshift-add-imports to 1.0.10 ([#28](https://github.com/Khasms/discord.js-codemod/issues/28)) ([28ffeee](https://github.com/Khasms/discord.js-codemod/commit/28ffeee69778c18fcdd8463c8d0259a9ef74017b))
+* stop adding unused import ([105f0c7](https://github.com/Khasms/discord.js-codemod/commit/105f0c73a6735058f7a1b5f2aa95163028d3512c))
+
+
+
 ## [0.3.1](https://github.com/Khasms/discord.js-codemod/compare/v0.3.0...v0.3.1) (2021-10-20)
 
 
