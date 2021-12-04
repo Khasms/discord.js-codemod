@@ -8,6 +8,7 @@ const {
 	UserFlags,
 } = require('../constants');
 const { parser } = require('../util');
+const addImports = require('jscodeshift-add-imports');
 
 module.exports = function transform(file, api, options) {
 	const j = api.jscodeshift;
@@ -41,7 +42,7 @@ module.exports = function transform(file, api, options) {
 			].includes(node.value),
 		)
 		.replaceWith(({ node }) => {
-			const bitfieldName = flags.find(([, value]) => value.includes(node.value)).at(0);
+			const bitfieldName = flags.find(([, value]) => value.includes(node.value))[0];
 			found.push(bitfieldName);
 
 			return j.memberExpression(
@@ -56,20 +57,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'Permissions');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('Permissions')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('Permissions')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(
-						j.importDeclaration([j.importSpecifier(j.identifier('Permissions'))], j.literal('discord.js')),
-					),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { Permissions } from 'discord.js';`]);
 	}
 
 	if (found.includes('ActivityFlags')) {
@@ -78,20 +68,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'ActivityFlags');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('ActivityFlags')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('ActivityFlags')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(
-						j.importDeclaration([j.importSpecifier(j.identifier('ActivityFlags'))], j.literal('discord.js')),
-					),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { ActivityFlags } from 'discord.js';`]);
 	}
 
 	if (found.includes('ApplicationFlags')) {
@@ -100,20 +79,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'ApplicationFlags');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('ApplicationFlags')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('ApplicationFlags')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(
-						j.importDeclaration([j.importSpecifier(j.identifier('ApplicationFlags'))], j.literal('discord.js')),
-					),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { ApplicationFlags } from 'discord.js';`]);
 	}
 
 	if (found.includes('MessageFlags')) {
@@ -122,20 +90,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'MessageFlags');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('MessageFlags')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('MessageFlags')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(
-						j.importDeclaration([j.importSpecifier(j.identifier('MessageFlags'))], j.literal('discord.js')),
-					),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { MessageFlags } from 'discord.js';`]);
 	}
 
 	if (found.includes('SystemChannelFlags')) {
@@ -144,20 +101,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'SystemChannelFlags');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('SystemChannelFlags')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('SystemChannelFlags')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(
-						j.importDeclaration([j.importSpecifier(j.identifier('SystemChannelFlags'))], j.literal('discord.js')),
-					),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { SystemChannelFlags } from 'discord.js';`]);
 	}
 
 	if (found.includes('UserFlags')) {
@@ -166,20 +112,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'UserFlags');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('UserFlags')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('UserFlags')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(
-						j.importDeclaration([j.importSpecifier(j.identifier('UserFlags'))], j.literal('discord.js')),
-					),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { UserFlags } from 'discord.js';`]);
 	}
 
 	if (found.includes('Intents')) {
@@ -188,18 +123,9 @@ module.exports = function transform(file, api, options) {
 			.filter(({ node }) => node.source.value === 'discord.js')
 			.forEach(({ node }) => {
 				const exists = node.specifiers.find((s) => s.imported.name === 'Intents');
-				if (!exists) {
-					node.specifiers.push(j.importSpecifier(j.identifier('Intents')));
-				}
+				if (!exists) node.specifiers.push(j.importSpecifier(j.identifier('Intents')));
 			});
-		if (!imports.size()) {
-			root
-				.find(j.ImportDeclaration)
-				.at(0)
-				.forEach((path) =>
-					path.insertAfter(j.importDeclaration([j.importSpecifier(j.identifier('Intents'))], j.literal('discord.js'))),
-				);
-		}
+		if (!imports.size()) addImports(root, [j.template.statement`import { Intents } from 'discord.js';`]);
 	}
 
 	return root.toSource(printOptions);
