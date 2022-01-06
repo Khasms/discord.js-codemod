@@ -26,7 +26,7 @@ module.exports = function transform(file, api, options) {
 			if (timeout) {
 				const timeoutProp = j.property('init', j.identifier('timeout'), timeout);
 
-				newNode[0].properties.push(timeoutProp);
+				newNode.properties.push(timeoutProp);
 			}
 
 			node.arguments = [newNode];

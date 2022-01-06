@@ -15,17 +15,15 @@ module.exports = function transform(file, api, options) {
 			},
 		})
 		.filter(({ node }) => {
-			return node.arguments.length !== 0 && node.arguments[node.arguments.length > 1 ? 1 : 0].type === 'Literal';
+			return node.arguments.length !== 0 && node.arguments[0].type === 'Literal';
 		})
 		.replaceWith(({ node }) => {
-			const reasonIndex = node.arguments.length > 1 ? 1 : 0;
-
-			const reasonParam = node.arguments[reasonIndex];
+			const reasonParam = node.arguments[0];
 			const newReasonParam = j.objectExpression([
 				j.property('init', j.identifier('reason'), j.literal(reasonParam.value)),
 			]);
 
-			node.arguments[reasonIndex] = newReasonParam;
+			node.arguments[0] = newReasonParam;
 
 			return node;
 		})

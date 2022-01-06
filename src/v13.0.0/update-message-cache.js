@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-
 const addImports = require('jscodeshift-add-imports');
 const { parser } = require('../util');
 

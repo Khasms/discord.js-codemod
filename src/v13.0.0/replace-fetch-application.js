@@ -14,10 +14,7 @@ module.exports = function transform(file, api, options) {
 				},
 			},
 		})
-		.forEach(({ node }) => {
-			node = node.callee;
-			node.property.name = 'application';
-		})
+		.replaceWith(({ node }) => j.memberExpression(j.identifier(node.callee.object.name), j.identifier('application')))
 		.toSource(printOptions);
 };
 

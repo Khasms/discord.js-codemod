@@ -28,8 +28,7 @@ module.exports = function transform(file, api, options) {
 			],
 		})
 		.replaceWith(({ node }) => {
-			const reasonIndex = node.arguments.length > 1 ? 1 : 0;
-			const props = node.arguments[reasonIndex].properties;
+			const props = node.arguments[0].properties;
 			const reason = props.find((prop) => prop.key.name === 'reason');
 			props.splice(props.indexOf(reason), 1);
 

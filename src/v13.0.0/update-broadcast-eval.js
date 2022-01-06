@@ -20,10 +20,11 @@ module.exports = function transform(file, api, options) {
 			],
 		})
 		.forEach(({ node }) => {
-			node.arguments[0] = j.arrowFunctionExpression(
-				[j.identifier('client')],
-				node.arguments[0].value.replaceAll('this', 'client'),
-			);
+			let arg = node.arguments[0];
+			const value = arg.value.replaceAll('this', 'client');
+			arg = j.arrowFunctionExpression([j.identifier('client')], j.blockStatement([]));
+			arg.body = value;
+			node.arguments[0] = arg;
 		})
 		.toSource(printOptions);
 };

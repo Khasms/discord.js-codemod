@@ -1,9 +1,9 @@
-const { readdir } = require('fs/promises');
+const { readdirSync } = require('fs');
 const { join } = require('path');
 const { parser } = require('../util');
 
-module.exports = async function transform(file, api, options) {
-	let files = await readdir(__dirname);
+module.exports = function transform(file, api, options) {
+	let files = readdirSync(__dirname);
 	files = files.filter((f) => f !== 'all.js');
 
 	for (const f of files) {

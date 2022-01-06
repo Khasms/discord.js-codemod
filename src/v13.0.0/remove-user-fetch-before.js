@@ -10,7 +10,9 @@ module.exports = function transform(file, api, options) {
 		.find(j.CallExpression, {
 			callee: {
 				object: {
-					name: 'users',
+					property: {
+						name: 'users',
+					},
 				},
 				property: {
 					name: 'fetch',
@@ -18,10 +20,8 @@ module.exports = function transform(file, api, options) {
 			},
 			arguments: [
 				{
-					type: 'ObjectExpression',
 					properties: [
 						{
-							type: 'Property',
 							key: {
 								name: 'before',
 							},
@@ -31,13 +31,10 @@ module.exports = function transform(file, api, options) {
 			],
 		})
 		.replaceWith(({ node }) => {
-			const beforeIndex = node.arguments.length > 1 ? 1 : 0;
-			const props = node.arguments[beforeIndex].properties;
+			const props = node.arguments[0].properties;
 			const before = props.find((prop) => prop.key.name === 'before');
 			props.splice(props.indexOf(before), 1);
-
 			if (props.length === 0) node.arguments = [];
-
 			return node;
 		})
 		.toSource(printOptions);
