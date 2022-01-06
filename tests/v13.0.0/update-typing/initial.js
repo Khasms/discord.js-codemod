@@ -1,0 +1,2 @@
+channel.startTyping();
+channel.stopTyping();

@@ -1,0 +1,1 @@
+client.on("messageCreate", message => {});

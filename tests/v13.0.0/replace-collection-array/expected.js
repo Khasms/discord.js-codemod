@@ -1,0 +1,2 @@
+[...collection.values()];
+[...collection.keys()];
