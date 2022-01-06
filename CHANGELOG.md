@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.1](https://github.com/Khasms/discord.js-codemod/compare/v1.0.0...v1.0.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* **deps:** make typescript a dependency ([1567ee0](https://github.com/Khasms/discord.js-codemod/commit/1567ee07143793e472a557bc91774bb80e57e288))
+
+
+
+## [1.0.1](https://github.com/Khasms/discord.js-codemod/compare/v1.0.0...v1.0.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* **deps:** make typescript a dependency ([1567ee0](https://github.com/Khasms/discord.js-codemod/commit/1567ee07143793e472a557bc91774bb80e57e288))
+
+
+
 # [1.0.0](https://github.com/Khasms/discord.js-codemod/compare/v0.3.2...v1.0.0) (2022-01-06)
 
 
