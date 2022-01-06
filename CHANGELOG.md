@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0](https://github.com/Khasms/discord.js-codemod/compare/v0.3.2...v1.0.0) (2022-01-06)
+
+
+### Bug Fixes
+
+* fix problems found by tests ([3f21d54](https://github.com/Khasms/discord.js-codemod/commit/3f21d541ea1c417ea1a46a7a42e84887865861d9))
+
+
+### Build System
+
+* add swc compilation and commitizen ([0b28d79](https://github.com/Khasms/discord.js-codemod/commit/0b28d794b4d34e9a317236cc54f1345c83e912cf))
+
+
+### BREAKING CHANGES
+
+* Due to compilation, previously available files are no longer included in built
+package.
+
+
+
 ## [0.3.2](https://github.com/Khasms/discord.js-codemod/compare/v0.3.0...v0.3.2) (2021-12-04)
 
 
