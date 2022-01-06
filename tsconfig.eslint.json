@@ -2,7 +2,6 @@
 	"compilerOptions": {
 		"allowJs": true,
 		// Type Checking
-		"alwaysStrict": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
 		"exactOptionalPropertyTypes": true,
@@ -21,7 +20,6 @@
 
 		// Emit
 		"declaration": true,
-		"declarationMap": true,
 		"importHelpers": true,
 		"importsNotUsedAsValues": "error",
 		"inlineSources": true,
@@ -31,7 +29,6 @@
 		"preserveConstEnums": true,
 		"removeComments": false,
 		"sourceMap": true,
-		"sourceRoot": "/",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 
@@ -45,7 +42,21 @@
 		// Completeness
 		"skipLibCheck": true
 	},
-	"types": ["node"],
-	"include": ["**/*.ts", "**/*.js"],
-	"exclude": ["**/tests/*.js", "**/tests/*.ts"]
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.js",
+		"**/*.cjs",
+		"**/*.mjs",
+		"**/*.jsx",
+		"**/*.test.ts",
+		"**/*.test.js",
+		"**/*.test.cjs",
+		"**/*.test.mjs",
+		"**/*.spec.ts",
+		"**/*.spec.cjs",
+		"**/*.spec.js",
+		"**/*.spec.mjs"
+	],
+	"exclude": []
 }

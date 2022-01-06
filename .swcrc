@@ -1,0 +1,20 @@
+{
+	"jsc": {
+		"parser": {
+			"syntax": "ecmascript",
+			"dynamicImport": true,
+			"exportDefaultFrom": true,
+			"importMeta": true
+		},
+		"target": "es2021",
+		"keepClassNames": false,
+		"minify": {
+			"compress": true,
+			"mangle": true
+		}
+	},
+	"sourceMaps": "inline",
+	"module": {
+		"type": "commonjs"
+	}
+}

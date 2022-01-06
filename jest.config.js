@@ -1,10 +1,12 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
-	testMatch: ['<rootDir>/tests/**/*.test.ts'],
+	testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
 	testEnvironment: 'node',
 	collectCoverage: true,
-	collectCoverageFrom: ['src/**/*.ts'],
+	collectCoverageFrom: ['src/**/*.js'],
+	coverageProvider: 'v8',
 	coverageDirectory: 'coverage',
+	coveragePathIgnorePatterns: ['<rootDir>/src/cli.js', '<rootDir>/src/util.js', '<rootDir>/src/v13.0.0/all.js'],
 	coverageReporters: ['text', 'lcov', 'clover'],
 	coverageThreshold: {
 		global: {
@@ -13,5 +15,7 @@ module.exports = {
 			statements: 70,
 		},
 	},
-	coveragePathIgnorePatterns: ['src/index.ts'],
+	transform: {
+		'^.+\\.(t|j)sx?$': ['@swc/jest'],
+	},
 };

@@ -6,7 +6,8 @@
 		"project": "./tsconfig.eslint.json"
 	},
 	"env": {
-		"jest": true
+		"jest": true,
+		"node": true
 	},
 	"rules": {
 		"@typescript-eslint/naming-convention": 0,
@@ -14,5 +15,6 @@
 		"@typescript-eslint/no-require-imports": 0,
 		"@typescript-eslint/no-var-requires": 0,
 		"@typescript-eslint/no-unsafe-argument": 0
-	}
+	},
+	"ignorePatterns": ["tests/*/**", "!tests/*/*"]
 }

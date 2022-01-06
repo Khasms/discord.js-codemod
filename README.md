@@ -3,6 +3,7 @@
   <p>
     <a href="https://www.npmjs.com/package/discord.js-codemod"><img src="https://img.shields.io/npm/v/discord.js-codemod.svg?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/discord.js-codemod"><img src="https://img.shields.io/npm/dt/discord.js-codemod.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a>
   </p>
 </div>
 
@@ -16,7 +17,7 @@ Uses [jscodeshift](https://github.com/facebook/jscodeshift) to do most of the wo
 ## Table of Contents
 
 - [Usage](#usage)
-  - [JSCodeShift Options](#jscodeshift-options)
+  - [JSCodeshift Options](#jscodeshift-options)
   - [Recast Options](#recast-options)
 - [Available Transformers](#available-transformers)
   - [v13.0.0](#v13.0.0)
